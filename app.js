@@ -1,5 +1,5 @@
 for(var i=0; i < 200; i++){
-  document.getElementById("addit").appendChild(document.createElement("div"))
+  document.getElementById("addit").appendChild(document.createElement("div")).classList.add("box")
 }
 
 for(var i=0; i < 10; i++){
@@ -7,13 +7,14 @@ for(var i=0; i < 10; i++){
 }
 
 for(var i=0; i < 16; i++){
-  document.getElementById("mini-grid").appendChild(document.createElement("div"))
+  document.getElementById("mini-grid").appendChild(document.createElement("div")).classList.add("box")
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
   let squares = Array.from(document.querySelectorAll('.grid div'))
   const scoreDisplay = document.querySelector('#score')
+  const endDisplay = document.querySelector('#end')
   const startBtn = document.querySelector('#start-button')
   const width = 10
 
@@ -74,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let nextRandom = 0
   let timerId
   let score = 0
-  const colors = ['orange', 'tomato', 'pink', 'green', 'violet', 'skyblue', 'brown']
+  const colors = ['red', 'red', 'red', 'red', 'red', 'red', 'red']
 
   let random = Math.floor(Math.random()*theTetrominoes.length)
   let current = theTetrominoes[random][currentRotation]
@@ -102,6 +103,14 @@ document.addEventListener('DOMContentLoaded', () => {
       moveRight()
     } else if (e.keyCode === 40) {
       moveDown()
+    } else if (e.keyCode === 32) {
+      document.querySelector('#start-button').click(function(){
+        document.body.trigger({
+            type: 'keypress',
+            which: 32,
+            keyCode: 32
+        })
+    })
     }
   }
 
@@ -214,7 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function gameOver() {
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))){
-      scoreDisplay.innerHTML = 'END'
+      endDisplay.innerHTML = 'GAME OVER'
+      endDisplay.style.color = "red"
       clearInterval(timerId)
     }
   }

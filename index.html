@@ -3,18 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Basic Tetris Game</title>
+  <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
   <link rel="stylesheet" href="style.css"></link>
 </head>
-<body>
+<body class="container">
 
-  <h3>Score: <span id="score">0</span></h3>
-  <button id="start-button">Start/Pause</button>
+  <h3 class="m-4 text-center"  style="text-decoration: underline;"> Tetris </span></h3>
 
-  <div class="container">
+  <div class="row d-flex justify-content-around">
     <div class="grid" id="addit"></div>
     <div class="mini-grid" id="mini-grid"></div>
   </div>
   
+  <span class=" d-flex justify-content-around">
+    <button type="button" class="btn btn-light mt-4 text-center" id="start-button"> Start / Pause </button>
+  </span>
+  <h3 class="m-3 text-center" id="end"> Score : <span id="score">0</span></h3>
+
+  <h5 class="mt-5 text-center">
+    <i> Made by 
+      <a href="https://www.linkedin.com/in/thebhushanmhatre/" className="alert-link" target="_blank" rel="noopener noreferrer">Bhushan
+      </a> with 
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+      </svg>
+    </i>
+  </h5>
+
   <script src="app.js" charset="utf-8"></script>
 </body>
 </html>

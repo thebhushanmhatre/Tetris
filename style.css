@@ -1,13 +1,9 @@
-.container {
-  display: flex;
-}
-
 .grid {
   width: 200px;
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: black;
 }
 
 .grid div {
@@ -19,14 +15,12 @@
   background-color: blue;
 }
 
-
 .mini-grid {
-  margin-left: 50px;
   width: 80px;
   height: 80px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: black;
 }
 
 .mini-grid div {
@@ -35,15 +29,15 @@
 }
 
 #start-button {
-  margin-left: 20px;
-  margin-bottom: 10px
-}
-
-h3 {
-  margin-left: 20px;
+  width: 50%;
+  border-color: grey;
 }
 
 #footer {
   margin-left: 50px;
   margin-top: 10px;
+}
+
+.box {
+  border: 1px double gray;
 }
