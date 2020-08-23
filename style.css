@@ -2,7 +2,6 @@
   display: flex;
 }
 
-
 .grid {
   width: 200px;
   height: 400px;
@@ -33,4 +32,18 @@
 .mini-grid div {
   height: 20px;
   width: 20px;
+}
+
+#start-button {
+  margin-left: 20px;
+  margin-bottom: 10px
+}
+
+h3 {
+  margin-left: 20px;
+}
+
+#footer {
+  margin-left: 50px;
+  margin-top: 10px;
 }

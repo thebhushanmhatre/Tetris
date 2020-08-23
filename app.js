@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     current.forEach(index => {
       squares[currentPosition + index].classList.remove('tetromino')
       squares[currentPosition + index].style.backgroundColor = ''
-
     })
   }
 
@@ -161,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const displayWidth = 4
   let displayIndex = 0
 
-
   const upNextTetrominoes = [
     [1, displayWidth+1, displayWidth*2+1, 2],
     [2, displayWidth, displayWidth+1, displayWidth+2],
@@ -176,12 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
     displaySquares.forEach(square => {
       square.classList.remove('tetromino')
       square.style.backgroundColor = ''
-
     })
     upNextTetrominoes[nextRandom].forEach(index => {
       displaySquares[displayIndex + index].classList.add('tetromino')
       displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom]
-
     })
   }
 
